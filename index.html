@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Care Hub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fdf6f9, #f3f0ea);
+      padding: 40px 20px;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      color: #b83260;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #85495e;
+      margin-top: 30px;
+    }
+    .section {
+      max-width: 600px;
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    label, textarea, input[type="text"] {
+      display: block;
+      margin-top: 12px;
+      width: 97%;
+      font-size: 16px;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    textarea {
+      height: 80px;
+      resize: none;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .date-display {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+    .encouragement {
+      background: #fff0f3;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+  </style>
+</head>
+<body>
+  <h1>Cassie's Health & Self-Care Hub</h1>
+  <div class="date-display" id="date"></div>
+
+  <div class="encouragement">
+    <p><strong>Law school is going to be tough and challenging!</strong> But I know you can handle it! To do your best you need to stay healthy both mentally and physically! This website is here to help you take care of yourself during any touagh and stressful times because you deserve support, balance, and love every single day! </p>
+  </div>
+
+  <div class="section">
+    <h2>Daily Self-Care Checklist</h2>
+    <label><input type="checkbox"> I ate a proper meal today</label>
+    <label><input type="checkbox"> I drank enough water</label>
+    <label><input type="checkbox"> I moved/stretch for 5+ minutes </label>
+    <label><input type="checkbox"> I did something kind for myself </label>
+  </div>
+
+  <div class="section">
+    <h2>What I Ate Today</h2>
+    <textarea placeholder="List your meals or snacks today..."></textarea>
+  </div>
+
+  <div class="section">
+    <h2>What I Drank Today</h2>
+    <textarea placeholder="Water, tea, coffee, anything..."></textarea>
+  </div>
+
+  <div class="section">
+    <h2>Movement or Exercise</h2>
+    <textarea placeholder="Stretching, walking, working out, etc."></textarea>
+  </div>
+
+  <script>
+    const dateEl = document.getElementById('date');
+    const today = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    dateEl.textContent = `Today is ${today.toLocaleDateString(undefined, options)}`;
+  </script>
+</body>
+</html>
